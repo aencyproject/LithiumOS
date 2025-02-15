@@ -17,6 +17,7 @@
       body{
         background: #000;
         overflow: hidden;
+        color: #fff;
       }
       a{
         text-decoration: none;
@@ -35,6 +36,27 @@
           <a href="index.html" style="text-decoration:none;background: #fff;border-radius: 5pc;color:#000;">Iniciar</a>
       </batata>
   </div>
+  <div class="container">
+    <div class="clock"></div>
+  </div>
+
+  <script>
+    const getHours = () => {
+const clock = document.getElementsByClassName('clock')[0]
+const date = new Date()
+const hours = date.getHours()
+const minutes = date.getMinutes()
+const seconds = date.getSeconds()
+const hour = hours < 10 ? `0${hours}` : hours
+const minute = minutes < 10 ? `0${minutes}` : minutes
+const second = seconds < 10 ? `0${seconds}` : seconds
+clock.innerHTML = `${hour}:${minute}:${second}`
+}
+
+setInterval(() => {
+getHours()
+}, 1000)
+  </script>
     <p></p>
     <div class="apps">
         <a href="todo.html">        <img src="todo.png" alt="todo"><p></p>To-Do</a>
@@ -42,8 +64,10 @@
         <a href="Config.html">        <img height="50px" width="50px" src="Config.png" alt="todo"><p></p>Config</a>
         <p></p>
         <a href="kitiwebsite.html">        <img src="kiti/kiti.png" alt="todo"><p></p>Kiti</a>
-        <p></p>
+
+    </div>        <p></p>
         <a href="mktv.html">        <img src="+KTV/+KTV (1).png" alt="todo"><p></p>+KTV</a>
-    </div>
+        <p></p>
+        <a href="goodlacar.html">        <img src="GoodLaçar.png" alt="todo"><p></p>GoodLaçar</a>
   </body>
 </html>
